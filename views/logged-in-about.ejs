@@ -1,0 +1,166 @@
+<%- include("partials/logged-in-about-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .about-page {
+      width: 100vw;
+      position: relative;
+      background-color: #0F4C75;
+    }
+
+    /* Shape Divider */
+
+    .custom-shape-divider-bottom-1601307827 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1601307827 svg {
+      position: relative;
+      display: block;
+      width: calc(145% + 1.3px);
+      height: 38px;
+    }
+
+    .custom-shape-divider-bottom-1601307827 .shape-fill {
+      fill: #000000;
+    }
+
+    .about-page-title {
+      width: 90%;
+      margin: auto;
+      padding: 135px 0 60px 0;
+      text-align: center;
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .about-page-title {
+        padding-top: 190px;
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
+      .about-page-title {
+        padding: 215px 0 75px 0;
+      }
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 2.3rem;  /* Small-screen */
+      color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-3px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 3.4rem;
+      }
+    }
+
+    .about-page-contents {
+      width: 90%;
+      margin: auto;
+      padding-bottom: 115px;
+      /* background-color: grey; */
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .about-page-contents {
+        padding-bottom: 160px;
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
+      .about-page-contents {
+        padding-bottom: 240px;
+      }
+    }
+
+    .about-page-contents img {
+      max-width: 100%;
+      height: auto;
+      width: 100px;
+      float: left;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1400px) {  /* Targeting large-screen devices */
+      .about-page-contents img {
+        transform: translateY(10px);
+      }
+    }
+
+    .paragraph-1 {
+      width: 100%;
+    }
+
+    .text-2 {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;  /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-2 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="about-page">
+    <div class="container-fluid">
+      <!-- Shape Divider -->
+      <div class="custom-shape-divider-bottom-1601307827">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+      </div>
+      <div class="about-page-title">
+        <h3 class="text-1">My Story</h3>
+      </div>
+      <div class="about-page-contents">
+      <img src="images/img-2.jpg" alt="Photo of teacher behind Learn With Grace">
+    <div class="paragraph-1">
+      <p class="text-2">I have been a classroom teacher since 2010: as a trainee teacher, classroom  teacher and as a  supply teacher to primary and secondary schools in the UK.
+      I am now teaching online. I inquire about learning goals, I find out the learner's current attainment (sometimes liaising with the school or college or reading school report or discussing with parents) and together we draw up a scheme of learning.</p>
+    </div>
+    <div class="paragraph-2">
+      <p class="text-2">I believe in supporting, motivating and preparing students to achieve in public examinations.
+      I have a flexible approach to teaching that takes into consideration different learning styles, hence I endeavour to create variety in lessons, making use of activities during which learning takes place. I believe in developing a good teacher/student relationship and engaging pupils in lessons in order to gain their trust and be able to manage the learning environment.</p>
+    </div>
+  </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

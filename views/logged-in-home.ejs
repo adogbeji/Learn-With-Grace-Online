@@ -1,0 +1,637 @@
+<%- include("partials/logged-in-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style media="all">
+    /* Inline styles are being applied along with External CSS */
+
+    .home-page-sect_a-img-container {
+      width: 100%;  /* Makes image take 100% width of its 'col' container */
+      border-radius: 30px;
+    }
+
+    .home-page-sect_a-img-container img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+      border-radius: 30px;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .home-page-sect_a-img-container img {
+        transform: scale(0.95) translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .home-page-sect_a-img-container img {
+        transform: translate(-5px, -3px) scale(0.93);
+      }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1400px) {  /* Targeting large-screen devices */
+      .home-page-sect_a-img-container img {
+        transform: scale(1.15) translateX(-3px);
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
+      .home-page-sect_a-img-container img {
+        transform: scale(1.15) translateX(-20px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="middle-container--1">
+    <div class="container-fluid">
+      <div class="row justify-content-around">
+        <div class="col-md-6">
+          <div class="card home-page-sect_a-card-colour--1">
+            <div class="card-body">
+              <div class="home-page-sect_a-text-container--1">
+                <h1 class="home-page-sect_a-text--1">Online tuition for everyone!</h1>
+                <p class="home-page-sect_a-text--2 lead">Yes, you can do it!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 align-self-md-center">
+          <div class="home-page-sect_a-img-container">
+            <img src="images/img-5b.jpg" alt="Photo advert for online education">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="middle-container--2">
+    <div class="container-fluid">
+      <div class="home-page-sect_b-text-container--1">
+        <h3 class="home-page-sect_b-text--1">Why Learn With Grace Online?</h3>
+      </div>
+      <div class="home-page-sect_b-reasons-container">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="card home-page-sect_b-card--1">
+                <div class="card-body">
+                  <div class="home-page-sect_b-text-container--2">
+                    <span class="home-page-sect_b-img-container">
+                      <i class="fas fa-user-edit"></i>
+                    </span>
+                    <p class="home-page-sect_b-text--2">You'll be learning from a <span class="font-weight-bold font-italic">highly-experienced</span> tutor who has taught countless students both in-person and online. By booking lessons online,
+                      you'll be able to benefit from top-quality tuition wherever you live - without having to make a commute.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="home-page-sect_b-hr-container mx-auto">
+                <hr>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card home-page-sect_b-card--2">
+                <div class="card-body">
+                  <div class="home-page-sect_b-text-container--2">
+                    <span class="home-page-sect_b-img-container">
+                      <i class="fas fa-book"></i>
+                    </span>
+                    <p class="home-page-sect_b-text--2">Learn With Grace Online caters to the needs of students across a wide range of age groups - from young kids up to those preparing to go off to Uni. So no matter what stage your child is in their
+                      education, the lessons will be <span class="font-weight-bold font-italic">specifically</span> tailored to meet their needs and help them reach their full potential!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="middle-container--3">
+    <div class="container-fluid">
+      <!-- Background Image Here... -->
+      <div class="home-page-sect_c-text-container--1">
+        <h3 class="home-page-sect_c-text--1">Reach your full potential...</h3>
+      </div>
+    </div>
+  </section>
+  <section class="middle-container--4">
+  <div class="container-fluid">
+    <div class="home-page-sect_d-text-container--1">
+      <h3 class="home-page-sect_d-text--1">Subjects on offer:</h3>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--1">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">7+</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--2">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">9+</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--3">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">11+</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--4">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">13+</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--5">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">KS3</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--6">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">iGCSE</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row justify-content-center gsce-row">
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--7">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">GCSE</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-auto pr-2">
+        <div class="card home-page-sect_d-card--8">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-container--2">
+              <h3 class="home-page-sect_d-text--2">A-Level</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    <div class="row justify-content-center subjects-row--1">
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--9">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-book-open"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">Functional Skills</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--10">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-clipboard"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">Mathematical Thinking</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--11">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-copy"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">Verbal Reasoning</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--12">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-shapes"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">Non-Verbal reasoning</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center subjects-row--2">
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--13">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-calculator"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">Maths</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--14">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-book"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">English</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div class="card home-page-sect_d-card--15">
+          <div class="card-body">
+            <div class="home-page-sect_d-text-img-container">
+              <span class="home-page-sect_d-img-container">
+                <i class="fas fa-vial"></i>
+              </span>
+              <div class="home-page-sect_d-text-container--3">
+                <h3 class="home-page-sect_d-text--3">Science</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="middle-container--5">
+    <div class="container-fluid">
+      <div class="home-page-sect_e-text-container--1">
+        <h3 class="home-page-sect_e-text--1">Across the major Exam Boards</h3>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-xs-auto">
+          <div class="card home-page-sect_e-card--1">
+            <div class="card-body">
+              <div class="home-page-sect_e-text-container--2">
+                <h3 class="home-page-sect_e-text--2"><a href="https://www.aqa.org.uk/">AQA</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-auto">
+          <div class="card home-page-sect_e-card--2">
+            <div class="card-body">
+              <div class="home-page-sect_e-text-container--2">
+                <h3 class="home-page-sect_e-text--2"><a href="https://qualifications.pearson.com/en/home.html">Edexcel</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-auto">
+          <div class="card home-page-sect_e-card--3">
+            <div class="card-body">
+              <div class="home-page-sect_e-text-container--2">
+                <h3 class="home-page-sect_e-text--2"><a href="https://www.ocr.org.uk/">OCR</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-auto">
+          <div class="card home-page-sect_e-card--4">
+            <div class="card-body">
+              <div class="home-page-sect_e-text-container--2">
+                <h3 class="home-page-sect_e-text--2"><a href="https://www.wjec.co.uk/">WJEC</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-auto">
+          <div class="card home-page-sect_e-card--5">
+            <div class="card-body">
+              <div class="home-page-sect_e-text-container--2">
+                <h3 class="home-page-sect_e-text--2"><a href="https://www.cityandguilds.com/">City & Guilds</a></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="middle-container--6">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-3 col-md-4">
+          <div class="card home-page-sect_f-card--1">
+            <img src="images/img-3.jpg" class="card-img-top" alt="Picture of a calendar">
+            <div class="card-body">
+              <div class="card-contents--1">
+                <div class="home-page-sect_f-text-container--1">
+                  <h3 class="home-page-sect_f-text--1">Standard Plan</h3>
+                </div>
+                <div class="home-page-sect_f-text-container--2">
+                  <h3 class="home-page-sect_f-text--2">£20/hr</h3>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+              <li class="list-group-item">PAYG</li>
+              <li class="list-group-item">30min +</li>
+              <li class="list-group-item">Fixed Pricing</li>
+              <li class="list-group-item">£10/hr Trial <i class="fas fa-asterisk home-page-sect_f-icon"></i></li>
+            </ul>
+            <div class="card-body">
+              <a href="/account/login" class="btn home-page-sect_f-button-colour--2 btn-lg btn-block">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <div class="card home-page-sect_f-card--2">
+            <img src="images/img-4.jpg" class="card-img-top" alt="Bank notes & coins">
+            <div class="card-body">
+              <div class="card-contents--1">
+                <div class="home-page-sect_f-text-container--1">
+                  <h3 class="home-page-sect_f-text--1">Money Saver</h3>
+                </div>
+                <div class="home-page-sect_f-text-container--2">
+                  <h3 class="home-page-sect_f-text--2">£180/10hrs</h3>
+                </div>
+              </div>
+            </div>
+            <ul class="list-group list-group-flush text-center">
+              <li class="list-group-item">30min +</li>
+              <li class="list-group-item">Save Money <i class="fas fa-asterisk home-page-sect_f-icon"></i></li>
+              <li class="list-group-item">Block Booking</li>
+            </ul>
+            <div class="card-body">
+              <a href="/account/login" class="btn home-page-sect_f-button-colour--2 btn-lg btn-block">
+                Book Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="middle-container--7">
+    <div class="container-fluid">
+      <div class="home-page-sect_g-text-container--1">
+        <h3 class="home-page-sect_g-text--1">Click here to get in touch!</h3>
+      </div>
+      <div class="home-page-sect_g-button-container">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn home-page-sect_g-button-colour--1 btn-lg" data-toggle="modal" data-target="#contactForm">
+          Contact
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="contactForm" data-backdrop="static" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content home-page-sect_g-modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title home-page-sect_g-modal-title" id="contactLabel">Personal Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body px-0">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <div class="card home-page-sect_g-modal-card-colour">
+                        <div class="card-body">
+                          <form class="gform text-left" action="https://script.google.com/macros/s/AKfycbxgZ7YH_jhzHdEdnKck-ulCtBlPW_iFQAgO372g/exec" method="POST">
+                            <div class="form-elements">
+                              <div class="form-group home-page-sect_g-form-input">
+                                <label for="clientName"><span class="home-page-sect_g-text-colour--1">Your Name:</span></label>
+                                <input type="text" id="clientName" name="name" class="form-control" aria-describedby="privacy1" autocomplete="off">
+                                <small id="privacy1" class="form-text home-page-sect_g-text-colour--2">Your name will <span class="font-weight-bold font-italic home-page-sect_g-highlight">never</span> be shared with anyone.</small>
+                              </div>
+                              <div class="form-group home-page-sect_g-form-input">
+                                <label for="clientEmail"><span class="home-page-sect_g-text-colour--1">Your Email:</span></label>
+                                <input type="email" id="clientEmail" name="email" class="form-control" aria-describedby="privacy2" autocomplete="off">
+                                <small id="privacy2" class="form-text home-page-sect_g-text-colour--2">Your email will <span class="font-weight-bold font-italic home-page-sect_g-highlight">never</span> be shared with anyone.</small>
+                              </div>
+                              <div class="form-group home-page-sect_g-form-input">
+                                <label for="clientMessage"><span class="home-page-sect_g-text-colour--1">Your Message:</span></label>
+                                <textarea id="clientMessage" name="message" class="form-control" rows="15"></textarea>
+                              </div>
+                              <button type="submit" class="btn home-page-sect_g-button-colour--2 btn-block">Submit</button>
+                            </div>
+                            <div class="thankyou_message" style="display: none;">
+                              <h2 class="form-submit--message"><strong><em>Thanks</em></strong> for contacting us! We'll be in touch soon!</h2>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn home-page-sect_g-button-colour--3 btn-block" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="middle-container--8">
+    <div class="container-fluid">
+      <!-- Shape Divider -->
+      <div class="custom-shape-divider-bottom-1601307827">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="home-page-sect_h-text-img-container--1">
+        <span class="home-page-sect_h-img-container--1">
+          <i class="fas fa-quote-right"></i>
+        </span>
+        <div class="home-page-sect_h-text-container--1">
+          <h3 class="home-page-sect_h-text--1">Listen to my happy students!</h3>
+          <p class="home-page-sect_h-text--2">Rated
+            <span class="home-page-sect_h-img-container--2">
+              <i class="fas fa-asterisk"></i>
+            </span>
+            <span class="home-page-sect_h-img-container--2">
+              <i class="fas fa-asterisk"></i>
+            </span>
+            <span class="home-page-sect_h-img-container--2">
+              <i class="fas fa-asterisk"></i>
+            </span>
+            <span class="home-page-sect_h-img-container--2">
+              <i class="fas fa-asterisk"></i>
+            </span>
+            <span class="home-page-sect_h-img-container--2">
+              <i class="fas fa-asterisk"></i>
+            </span> 4.7
+          </p>
+        </div>
+      </div>
+      <div class="home-page-sect_h-reviews-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card home-page-sect_h-card--1">
+                <div class="card-body">
+                  <div class="home-page-sect_h-text-img-container--2">
+                    <span class="home-page-sect_h-img-container--3">
+                      <i class="fas fa-quote-right"></i>
+                    </span>
+                    <div class="home-page-sect_h-text-container--2">
+                      <p class="home-page-sect_h-text--3">Gladys is an excellent and very caring tutor.</p>
+                    </div>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <div class="home-page-sect_h-text-container--3">
+                      <p class="home-page-sect_h-footer-text--1 font-italic">- Christian H</p>
+                    </div>
+                    <div class="home-page-sect_h-text-container--4">
+                      <p class="home-page-sect_h-footer-text--2">(August 2020)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card home-page-sect_h-card--2">
+                <div class="card-body">
+                  <div class="home-page-sect_h-text-img-container--2">
+                    <span class="home-page-sect_h-img-container--3">
+                      <i class="fas fa-quote-right"></i>
+                    </span>
+                    <div class="home-page-sect_h-text-container--2">
+                      <p class="home-page-sect_h-text--3">Gladys is a patient and hard working tutor. She is helping my daughter to review and strengthen different aspects of her mathematical understanding in preparation for her higher Maths
+                        baccalaureate exam. She has demonstrated herself to be a good listener in terms of my daughter’s needs, and both flexible and student- centered in her approach.</p>
+                    </div>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <div class="home-page-sect_h-text-container--3">
+                      <p class="home-page-sect_h-footer-text--1 font-italic">- Mark R</p>
+                    </div>
+                    <div class="home-page-sect_h-text-container--4">
+                      <p class="home-page-sect_h-footer-text--2">(March 2020)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card home-page-sect_h-card--3">
+                <div class="card-body">
+                  <div class="home-page-sect_h-text-img-container--2">
+                    <span class="home-page-sect_h-img-container--3">
+                      <i class="fas fa-quote-right"></i>
+                    </span>
+                    <div class="home-page-sect_h-text-container--2">
+                      <p class="home-page-sect_h-text--3">Gladys was great, she identified quickly what my nephew was struggling with and taught him ways to get around them. She also helped a lot with exam technique, was very good at breaking things
+                        down and teaching how to do things step by step.</p>
+                    </div>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <span class="home-page-sect_h-img-container--4">
+                      <i class="fas fa-asterisk"></i>
+                    </span>
+                    <div class="home-page-sect_h-text-container--3">
+                      <p class="home-page-sect_h-footer-text--1 font-italic">- David E</p>
+                    </div>
+                    <div class="home-page-sect_h-text-container--4">
+                      <p class="home-page-sect_h-footer-text--2">(June 2019)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

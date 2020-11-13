@@ -1,0 +1,848 @@
+<%- include("partials/account-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Account - Learn With Grace Online</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style media="all">
+    #main {
+      transition: margin-left 0.5s;
+    }
+
+    hr {
+      border-style: none;  /* Removes default <hr> border-style(inset) & width(1px) */
+      border-top-style: solid;
+      border-width: 3px;
+      border-color: #050505;
+      width: 100%;  /* Width is relative to parent 'hr-container' div */
+    }
+
+    /* Side Navigation Menu */
+
+    .sidenav {  /* Targeting small-screen devices & others */
+      transition: 0.5s;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      padding-top: 15px;  /* Small-screen */
+      background-color: #111111;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .sidenav {
+        padding-top: 60px;
+      }
+    }
+
+    .account-user-name {  /* Targeting small-screen devices & others */
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;  /* Small-screen */
+      color: #FFFF00;
+      display: inline-block;  /* Allows margin to be applied */
+      padding-left: 32px;  /* SAME as left padding applied to <a></a> tags below */
+      padding-bottom: 20px;
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .account-user-name {
+        font-size: 1.4rem;
+      }
+    }
+
+    .sidenav a {  /* Targeting small-screen devices & others */
+      padding: 8px 8px 8px 32px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;  /* Small-screen */
+      color: #EEEEEE;
+      line-height: 1.1;
+      text-decoration: none;  /* Removes underline */
+      display: block;  /* Lines up menu items vertically */
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .sidenav a {
+        font-size: 1.4rem;
+      }
+    }
+
+    .sidenav a:hover {
+      color: #FFFFC5;
+    }
+
+    .sidenav .sidebar-icon {
+      color: #EEEEEE;
+    }
+
+    .sidenav .closebtn {  /* Button to close Sidenav */
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 2rem;
+      margin-left: 50px;
+    }
+
+    /* Sidenav button container */
+
+    .sidenav-button-container {
+      width: 100vw;
+      background-color: #0F4C75;
+    }
+
+    .account-icon {
+      font-size: 1.2rem;
+      color: #000000;
+      cursor: pointer;
+      margin-top: 30px;
+      display: inline-block;
+      transform: translateX(65px);
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .account-icon {
+        transform: translateX(20px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .account-icon {
+        transform: translateX(40px);
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
+      .account-icon {
+        transform: translateX(80px);
+      }
+    }
+
+    /* Main Contents */
+
+    .account-page {
+      width: 100vw;
+      position: relative;
+      background-color: #0F4C75;
+    }
+
+    /* Shape Divider */
+
+    .custom-shape-divider-bottom-1601307827 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1601307827 svg {
+        position: relative;
+        display: block;
+        width: calc(145% + 1.3px);
+        height: 38px;
+    }
+
+    .custom-shape-divider-bottom-1601307827 .shape-fill {
+        fill: #000000;
+    }
+
+    .text-container--1 {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding: 80px 0 100px 0;
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-container--1 {
+        padding: 60px 0 75px 0;
+      }
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1.8rem;  /* Small-screen */
+      color: #FFFFFF;
+    }
+
+     @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+       .text-1 {
+         transform: translateX(-3px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+       .text-1 {
+         font-size: 2.7rem;
+       }
+     }
+
+     .text-2 {  /* Targeting small-screen devices & others */
+       font-family: 'Poppins', sans-serif;
+       font-weight: 700;
+       font-size: 1.5rem;  /* Small-screen */
+       color: #FFFFFF;
+       transform: translateY(3px);
+     }
+
+     @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+       .text-2 {
+         transform: translateX(-3px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+       .text-2 {
+         font-size: 1.8rem;
+       }
+     }
+
+     .card-1 {
+       border: none;
+       background-color: #0F4C75;
+     }
+
+     @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+       .card-1 {
+         transform: translateX(-3px);
+       }
+     }
+
+     .card-1:hover {
+       outline: 1.2px groove #FFFFFF;
+       z-index: 10;  /* Places outline above text left edge */
+       background-color: transparent;  /* Prevents text from being blocked out on hover */
+     }
+
+     .account-booking-container {
+       width: 90%;
+       margin: auto;
+       padding-bottom: 80px;
+       /* background-color: grey; */
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .account-booking-container {
+         width: 100%;
+       }
+     }
+
+     .text-container--2 {  /* Reduces width of text container for better fit on Medium Devices! */
+       width: 85%;
+       margin: auto;
+       text-align: center;
+       /* background-color: #FF0000; */
+     }
+
+     .card-2 {
+       border: none;
+       z-index: 10;  /* Prevents text from being overlapped by button card */
+       background-color: #0F4C75;
+     }
+
+     .text-3a {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 500;
+       font-size: 1rem;
+       color: #00B7C2;
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .text-3a {
+         transform: translateX(-14%);
+       }
+     }
+
+     .text-3b {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 500;
+       font-size: 1rem;
+       color: #00B7C2;
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .text-3b {
+         transform: translateX(-14%);
+       }
+     }
+
+     .text-3c {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 500;
+       font-size: 1rem;
+       color: #00B7C2;
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .text-3c {
+         transform: translateX(-20%);
+       }
+     }
+
+     .text-3d {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 500;
+       font-size: 1rem;
+       color: #00B7C2;
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .text-3d {
+         transform: translateX(-14%);
+       }
+     }
+
+     .card-3 {
+       border: none;
+       background-color: #0F4C75;
+     }
+
+     .button-colour {
+       color: #FFFFFF;
+       border-radius: 0;
+       background-color: #050505;
+     }
+
+     .button-colour:hover {
+       color: #FFFFFF;
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .button-container--1 .button-colour {
+         transform: translateY(30px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .button-container--1 .button-colour {
+         transform: translate(-20px, 40px);
+       }
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .button-container--2 .button-colour {
+         transform: translate(-25px, 35px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .button-container--2 .button-colour {
+         transform: translateY(50px);
+       }
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .button-container--3 .button-colour {
+         transform: translate(-50px, 40px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .button-container--3 .button-colour {
+         transform: translate(-5px, 40px);
+       }
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .button-container--4 .button-colour {
+         transform: translate(20px, 30px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .button-container--4 .button-colour {
+         transform: translate(-15px, 40px);
+       }
+     }
+
+     @media only screen and (min-width: 768px) {
+       .hr-container {
+         width: 60%;
+       }
+     }
+
+     .text-container--4 {  /* Allows text occupy full width */
+       text-align: center;
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .text-container--4 .text-2 {
+         transform: translate(16%, 22px);
+       }
+     }
+
+     @media only screen and (min-width: 992px) {  /* large-screen devices and up */
+       .text-container--4 .text-2 {
+         transform: translate(20px, 25px);
+       }
+     }
+
+     .text-3e {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 500;
+       font-size: 1rem;
+       color: #00B7C2;
+     }
+
+     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+       .text-3e {
+         transform: translateX(20%);
+       }
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+       .text-3e {
+         transform: translateX(60px);
+       }
+     }
+
+     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+      .button-container--5 .button-colour {
+        transform: translate(50px, 35px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .button-container--5 .button-colour {
+        transform: translate(20px, 45px);
+      }
+    }
+
+    .text-container--5 {  /* Allows text occupy full width */
+      text-align: center;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .text-container--5 .text-2 {
+        transform: translate(6%, 22px);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* large-screen devices and up */
+      .text-container--5 .text-2 {
+        transform: translate(20px, 25px);
+      }
+    }
+
+    .text-3f {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      color: #00B7C2;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .text-3f {
+        transform: translateX(22%);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+      .text-3f {
+        transform: translateX(60px);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+     .button-container--6 .button-colour {
+       transform: translate(50px, 35px);
+     }
+   }
+
+   @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+     .button-container--6 .button-colour {
+       transform: translate(20px, 45px);
+     }
+   }
+
+   .text-container--6 {  /* Allows text occupy full width */
+     text-align: center;
+   }
+
+   @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+     .text-container--6 .text-2 {
+       transform: translate(6%, 22px);
+     }
+   }
+
+   @media only screen and (min-width: 992px) {  /* large-screen devices and up */
+     .text-container--6 .text-2 {
+       transform: translate(20px, 25px);
+     }
+   }
+
+   .text-3g {
+     font-family: 'Poppins', sans-serif;
+     font-weight: 500;
+     font-size: 1rem;
+     color: #00B7C2;
+   }
+
+   @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+     .text-3g {
+       transform: translateX(22%);
+     }
+   }
+
+   @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+     .text-3g {
+       transform: translateX(60px);
+     }
+   }
+
+   @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+    .button-container--7 .button-colour {
+      transform: translate(50px, 35px);
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+    .button-container--7 .button-colour {
+      transform: translate(20px, 45px);
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+  <div id="main">
+
+    <!-- Side Navigation Menu -->
+    <div id="mySidenav" class="sidenav">
+      <!-- Greeting message to User -->
+      <span class="account-user-name">Hi, <%= name %>!</span>
+
+      <!-- Menu Items -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/account"><i class="fas fa-user sidebar-icon"></i> Account</a>
+      <a href="/account/details"><i class="fas fa-folder-open sidebar-icon"></i> Details</a>
+      <a href="/account/details"><i class="fas fa-key sidebar-icon"></i> Reset Password</a>
+      <a href="/account/logout"><i class="fas fa-sign-out-alt sidebar-icon"></i> Logout</a>
+    </div>
+
+    <!-- Bottom Header From Home Page -->
+    <header class="top-container--2">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/"><img src="images/logo.png" alt="Website Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars hamburger-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Container for Sidenav opening button -->
+    <header class="sidenav-button-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <!-- Button to open Sidenav -->
+            <span class="account-icon" onclick="openNav()"><i class="fas fa-user-circle"></i></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Contents -->
+    <section class="account-page">
+      <div class="container-fluid">
+        <!-- Shape Divider -->
+        <div class="custom-shape-divider-bottom-1601307827">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+   <div class="text-container--1">
+     <h3 class="text-1">Please go below to make your lesson bookings!</h3>
+   </div>
+   <div class="account-booking-container">
+     <div class="container">
+  <div class="row justify-content-center no-gutters">
+    <div class="col-md-auto">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--2">
+      <h3 class="text-2">Verbal Reasoning</h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+    <div class="text-container--3a text-center text-md-left">
+      <p class="text-3a">If you need to book Verbal Reasoning Lessons or just want more practice, you're at the right place. Click the button NOW to save your spot!!</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--1">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+
+      <!-- <a href="#" class="btn button-colour btn-lg btn-block">Register</a> -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="hr-container mx-auto">
+    <hr>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-lg-auto col-md-4">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--2">
+      <h3 class="text-2">Non-Verbal <span class="floating-text--1">Reasoning</span></h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+      <div class="text-container--3b text-center text-md-left">
+        <p class="text-3b">Non-Verbal Reasoning trains you to analyse visual cues and spot relationships between shapes, images & objects. Click the button NOW to save your spot!!</p>
+      </div>
+    </div>
+  </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--2">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="hr-container mx-auto">
+    <hr>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-auto col-md-4">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--2">
+      <h3 class="text-2">Mathematical Thinking</h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+    <div class="text-container--3c text-center text-md-left">
+      <p class="text-3c">Go beyond just Maths: learn to solve complex problems by breaking them down to the fundamentals. Click the button NOW to save your spot!!</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--3">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="hr-container mx-auto">
+    <hr>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-md-auto">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--2">
+      <h3 class="text-2">Functional Skills</h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+    <div class="text-container--3 text-center text-md-left">
+      <p class="text-3d">Go beyond academia and learn to apply your skills in everyday life. That's what you get with Functional Skills. Click the button NOW to save your spot!!</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--4">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="hr-container mx-auto">
+    <hr>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-auto">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--4">
+      <h3 class="text-2">Maths</h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+    <div class="text-container--3 text-center text-md-left">
+      <p class="text-3e">Want to get better at Maths, prepare for exams or be able to solve Mathematical problems? Learn With Grace Online will give you high-quality online tuition catered to turn your weaknesses into strengths. Click the button NOW to save your spot!!</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--5">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="hr-container mx-auto">
+    <hr>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-md-auto">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--5">
+      <h3 class="text-2">English</h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+    <div class="text-container--3 text-center text-md-left">
+      <p class="text-3f">English is the one language that's guaranteed to get you around the world! Learn with Grace Online can teach you English Language up to GCSE level - beginners are warmly welcomed. Click the button NOW to save your spot!!</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--6">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="hr-container mx-auto">
+    <hr>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-md-auto">
+      <div class="card card-1">
+  <div class="card-body">
+    <div class="text-container--6">
+      <h3 class="text-2">Science</h3>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-lg-3 col-md-4">
+      <div class="card card-2">
+  <div class="card-body">
+    <div class="text-container--3 text-center text-md-left">
+      <p class="text-3g">Wanting to skill up in Sciences? Apart from Maths, English and Verbal Reasoning, we can also offer lesson in Science for those who need it. Click the button NOW to save your spot!!</p>
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card card-3">
+  <div class="card-body">
+    <div class="button-container--7">
+      <!-- Calendly link widget begin -->
+      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+      <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+      <a href="" onclick="Calendly.initPopupWidget ({url: 'https://calendly.com/learnwithgrace/60min' });return false;" class="btn button-colour btn-lg btn-block">Register</a>
+      <!-- Calendly link widget end -->
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+   </div>
+</div>
+    </section>
+
+  </div>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

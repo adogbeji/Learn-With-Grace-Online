@@ -1,0 +1,243 @@
+<%- include("partials/register-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .register-page {
+      width: 100vw;
+      position: relative;
+      background-color: #0F4C75;
+    }
+
+    /* Shape Divider */
+    .custom-shape-divider-bottom-1601307827 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1601307827 svg {
+      position: relative;
+      display: block;
+      width: calc(145% + 1.3px);
+      height: 38px;
+    }
+
+    .custom-shape-divider-bottom-1601307827 .shape-fill {
+      fill: #000000;
+    }
+
+    .form-container {
+      width: 85%;
+      margin: auto;
+      padding: 100px 0 200px 0;
+      /* background-color: #000000; */
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .form-container {
+        padding-bottom: 130px;
+      }
+    }
+
+    .header-container {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 20px;
+      /* background-color: #FF0000; */
+    }
+
+    .img-container {
+      font-size: 3rem;
+      color: #FFFF00;
+      display: inline-block;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .img-container {
+        transform: scale(0.85) translate(-5px, 1px);
+      }
+    }
+
+    .text-container {
+      display: inline-block;
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 2.3rem;  /* Small-screen */
+      color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 3.4rem;
+      }
+    }
+
+    .form-background {
+      border-radius: 0;
+      background-color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .form-background {
+        transform: translateX(-3px);
+      }
+    }
+
+    .text-colour {
+      color: #000000;
+    }
+
+    .form-group input {
+      border-radius: 0;
+    }
+
+    .button-colour {
+      color: #FFFFFF;
+      border-radius: 0;
+      background-color: #000000;
+    }
+
+    .button-colour:hover {
+      color: #FFFFFF;
+    }
+
+    .login-message {
+      width: 40%;
+      margin-left: auto;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .login-message {
+        width: 90%;
+      }
+    }
+
+    .login-prompt {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 1;
+      color: #000000;
+      transform: translate(95px, 2px);
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .login-prompt {
+        transform: translate(20px, 1px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .login-prompt {
+        transform: translate(6px, 2px);
+      }
+    }
+
+    .login-prompt a {
+      color: #01C5C4;
+      text-decoration: none;
+    }
+
+    .login-prompt a:hover {
+      color: #FF0000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="register-page">
+    <div class="container-fluid">
+      <!-- Shape Divider -->
+      <div class="custom-shape-divider-bottom-1601307827">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+      </div>
+      <div class="form-container">
+        <div class="header-container">
+        <span class="img-container">
+          <i class="fas fa-user-plus"></i>
+        </span>
+        <div class="text-container">
+          <h3 class="text-1">Register</h3>
+        </div>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+              <div class="card form-background">
+                <div class="card-body">
+                  <%- include("partials/messages"); -%>
+                  <form action="/account/register" method="POST">
+                    <div class="form-group">
+                      <label for="clientName"><span class="font-weight-bold text-colour">Name:</span></label>
+                      <input type="text" name="name" id="clientName"
+                       class="form-control"
+                       autocomplete="off"
+                       value="<%= typeof name != 'undefined' ? name: '' %>"
+                       >
+                    </div>
+                    <div class="form-group">
+                      <label for="clientEmail"><span class="font-weight-bold text-colour">Email:</span></label>
+                      <input type="email" name="email" id="clientEmail"
+                       class="form-control"
+                       autocomplete="off"
+                       value="<%= typeof email != 'undefined' ? email: '' %>"
+                       >
+                    </div>
+                    <div class="form-group">
+                      <label for="clientPassword1"><span class="font-weight-bold text-colour">Password:</span></label>
+                      <input type="password" name="password1" id="clientPassword1"
+                       class="form-control"
+                       value="<%= typeof password1 != 'undefined' ? password1: '' %>"
+                       >
+                    </div>
+                    <div class="form-group">
+                      <label for="clientPassword2"><span class="font-weight-bold text-colour">Confirm Password:</span></label>
+                      <input type="password" name="password2" id="clientPassword2"
+                       class="form-control"
+                       value="<%= typeof password2 != 'undefined' ? password2: '' %>"
+                       >
+                    </div>
+                    <button type="submit" class="btn button-colour btn-block">Register</button>
+                    <div class="login-message">
+                      <p class="login-prompt">Got an account? <a href="/account/login">Login</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

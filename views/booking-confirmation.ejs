@@ -1,0 +1,198 @@
+<%- include("partials/booking-confirmation-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .booking-confirmation-page {
+      width: 100vw;
+      position: relative;
+      background-color: #0F4C75;
+    }
+
+    /* Shape Divider */
+    .custom-shape-divider-bottom-1601307827 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1601307827 svg {
+      position: relative;
+      display: block;
+      width: calc(145% + 1.3px);
+      height: 38px;
+    }
+
+    .custom-shape-divider-bottom-1601307827 .shape-fill {
+      fill: #000000;
+    }
+
+    .success-page {
+      width: 90%;
+      margin: auto;
+      padding: 100px 0;
+      text-align: center;
+      /* background-color: #000000; */
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .success-page {
+        padding: 145px 0 225px 0;
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {  /* Targeting X-large devices */
+      .success-page {
+        padding: 150px 0 265px 0;
+      }
+    }
+
+    .success-background {
+      background-color: #0F4C75;
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 2.5rem;  /* Small-screen */
+      color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 3.6rem;
+      }
+    }
+
+    .hr-container {
+      width: 30%;  /* This sets visible <hr> width & makes it dynamic */
+      margin: 8px 0;
+    }
+
+    .hr-container hr {
+      border-style: none;  /* Removes default <hr> border-style(1px) & width(1px) */
+      border-top-style: dashed;
+      border-width: 10px;
+      border-color: #292121;
+      width: 100%;  /* Width is relative to parent 'hr-container' div */
+    }
+
+    .text-2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #FFFF00;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-2 {
+        transform: translateX(-5px);
+      }
+    }
+
+    .pathway-buttons {
+      width: 90%;
+      padding: 15px 0;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .pathway-buttons a:nth-child(1) {
+        margin-bottom: 5px;
+        transform: translateX(-5px);
+      }
+
+      .pathway-buttons a:nth-child(2) {
+        transform: translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .pathway-buttons a:nth-child(1) {  /* NOTE: :first-child selector DOESN'T work!! */
+        transform: translateY(-40px);
+      }
+
+      .pathway-buttons a:nth-child(2) {
+        transform: translateY(-40px);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+      .pathway-buttons a:nth-child(1) {  /* NOTE: :first-child selector DOESN'T work!! */
+        transform: translateY(-60px);
+      }
+
+      .pathway-buttons a:nth-child(2) {
+        transform: translateY(-60px);
+      }
+    }
+
+    .button-colour {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    .button-colour:hover {
+      color: #FFFFFF;
+    }
+
+    .button-size {
+      width: 180px;
+      height: 60px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="booking-confirmation-page">
+    <div class="container-fluid">
+      <!-- Shape Divider -->
+      <div class="custom-shape-divider-bottom-1601307827">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="success-page">
+        <div class="jumbotron jumbotron-fluid text-center success-background">
+          <div class="container">
+            <h1 class="text-1">Booking Confirmed!</h1>
+            <div class="hr-container mx-auto">
+              <hr>
+            </div>
+            <p class="text-2">Please go to your user account or back to our home page:</p>
+          </div>
+        </div>
+        <div class="pathway-buttons">
+          <a href="/account" class="btn button-colour button-size btn-lg"><span class="font-weight-bold align-middle">My Account</span></a>
+          <a href="/" class="btn button-colour button-size btn-lg"><span class="font-weight-bold align-middle">Home Page</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

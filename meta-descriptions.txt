@@ -1,0 +1,37 @@
+Meta Descriptions:-
+
+HOME PAGE: Welcome to Learn With Grace Online! A place where you can book high-quality Maths tuition at an affordable rate. Click above to learn more!!
+
+ABOUT PAGE: Want to book online Maths lessons? Come and learn more about the wonderful tutor behind Learn With Grace Online!
+
+ACCOUNT PAGE: Need to book a lesson at Learn With Grace Online? This is the official booking page for registered users only!
+
+ACCOUNT DETAILS PAGE: Need to update your personal details with Learn With Grace Online? You must be logged in to view this page!
+
+REGISTER PAGE: So, you want to sign up to Learn With Grace Online? Head straight above to create your FREE account!
+
+LOGIN PAGE: If you’re a member of Learn With Grace Online, visit the link above to sign into your personal account.
+
+LOGOUT PAGE: This page confirms that you have successfully logged out from your Learn With Grace Online account.
+
+BOOKING CONFIRMATION PAGE: If you’ve booked a lesson with Learn With Grace Online, this page shows that your booking was successful.
+
+
+
+Page Titles:-
+
+HOME PAGE: Home - Learn With Grace Online
+
+ABOUT PAGE: About - Learn With Grace Online
+
+ACCOUNT PAGE: Account - Learn With Grace Online
+
+ACCOUNT DETAILS PAGE: Account - Learn With Grace Online
+
+REGISTER PAGE: Register - Learn With Grace Online
+
+LOGIN PAGE: Login - Learn With Grace Online
+
+LOGOUT PAGE: Logout - Learn With Grace Online
+
+BOOKING CONFIRMATION PAGE: Booking Confirmed - Learn With Grace Online

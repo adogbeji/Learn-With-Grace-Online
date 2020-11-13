@@ -1,0 +1,494 @@
+<%- include("partials/account-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <style media="all">
+    #main {
+      transition: margin-left 0.5s;
+    }
+
+    hr {
+      /* Removes default <hr> border-style(inset) & width(1px) */
+      border-style: none;
+      border-top-style: solid;
+      border-width: 3px;
+      border-color: #050505;
+      width: 100%;
+      /* Width is relative to parent 'hr-container' div */
+    }
+
+    /* Side Navigation Menu */
+
+    .sidenav {
+      /* Targeting small-screen devices & others */
+      transition: 0.5s;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      overflow-x: hidden;
+      padding-top: 15px;
+      /* Small-screen */
+      background-color: #111111;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* Targeting medium-screen devices and up */
+      .sidenav {
+        padding-top: 60px;
+      }
+    }
+
+    .account-user-name {
+      /* Targeting small-screen devices & others */
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+      /* Small-screen */
+      color: #FFFF00;
+      display: inline-block;
+      /* Allows margin to be applied */
+      padding-left: 32px;
+      /* SAME as left padding applied to <a></a> tags below */
+      padding-bottom: 20px;
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* Targeting medium-screen devices and up */
+      .account-user-name {
+        font-size: 1.4rem;
+      }
+    }
+
+    .sidenav a {
+      /* Targeting small-screen devices & others */
+      padding: 8px 8px 8px 32px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.2rem;
+      /* Small-screen */
+      color: #EEEEEE;
+      line-height: 1.1;
+      text-decoration: none;
+      /* Removes underline */
+      display: block;
+      /* Lines up menu items vertically */
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* Targeting medium-screen devices and up */
+      .sidenav a {
+        font-size: 1.4rem;
+      }
+    }
+
+    .sidenav a:hover {
+      color: #FFFFC5;
+    }
+
+    .sidenav .sidebar-icon {
+      color: #EEEEEE;
+    }
+
+    .sidenav .closebtn {
+      /* Button to close Sidenav */
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 2rem;
+      margin-left: 50px;
+    }
+
+    /* Sidenav button container */
+
+    .sidenav-button-container {
+      width: 100vw;
+      background-color: #0F4C75;
+    }
+
+    .account-icon {
+      font-size: 1.2rem;
+      color: #000000;
+      cursor: pointer;
+      margin-top: 30px;
+      display: inline-block;
+      transform: translateX(65px);
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .account-icon {
+        transform: translateX(20px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .account-icon {
+        transform: translateX(40px);
+      }
+    }
+
+    @media only screen and (min-width: 1400px) {
+
+      /* Targeting X-large devices */
+      .account-icon {
+        transform: translateX(80px);
+      }
+    }
+
+    /* Main Contents */
+
+    .account-details-page {
+      width: 100vw;
+      position: relative;
+      background-color: #0F4C75;
+    }
+
+    /* Shape Divider */
+
+    .custom-shape-divider-bottom-1601307827 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+      transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1601307827 svg {
+      position: relative;
+      display: block;
+      width: calc(145% + 1.3px);
+      height: 38px;
+    }
+
+    .custom-shape-divider-bottom-1601307827 .shape-fill {
+      fill: #000000;
+    }
+
+    .text-container--1 {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding: 80px 0 20px 0;
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-container--1 {
+        padding: 70px 0 25px 0;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .text-container--1 {
+        padding-top: 120px;
+      }
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1.8rem;  /* Small-screen */
+      color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-3px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 2.7rem;
+      }
+    }
+
+    .update-details-section {  /* Targeting small-screen devices & others */
+      width: 90%;
+      margin: auto;
+      padding-bottom: 80px;  /* Small-screen */
+      /* background-color: grey; */
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen and up */
+      .update-details-section {
+        padding-bottom: 100px;
+      }
+    }
+
+    .form-background {
+      border-radius: 0;
+      background-color: #111111;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .form-background {
+        transform: translateX(-7px);
+      }
+    }
+
+    .text-colour {
+      color: #FFFF00;
+    }
+
+    .update-form-input input {
+      border-radius: 0;
+    }
+
+    .button-colour--1 {
+      color: #000000;
+      border-radius: 0;
+      margin-top: 15px;  /* Creates tiny space between button and input fields above */
+      background-color: #686D76;
+    }
+
+    .button-colour--1:hover {
+      color: #000000;
+      background-color: #686D76;
+    }
+
+    .close-account-row {
+      padding-top: 30px;
+    }
+
+    .close-account-button {
+      border: none;
+      background-color: #0F4C75;
+    }
+
+    .button-colour--2 {
+      color: #EEEEEE;
+      border-radius: 0;
+      background-color: #7E0FC5;
+    }
+
+    .button-colour--2:hover {
+      color: #EEEEEE;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .button-colour--2 {
+        transform: translateX(-2px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .button-colour--2 {
+        transform: scale(1.2)
+      }
+    }
+
+    .modal-content {
+      background-color: #EEEEEE;
+    }
+
+    .modal-title {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 1.8rem;  /* Small-screen */
+      color: #050505;
+      background-color: #FF0000;  /* Creates contrasting background */
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+       .modal-title {
+         font-size: 2.3rem;
+       }
+     }
+
+     .modal-text-container {
+       width: 90%;
+       margin: auto;
+       text-align: left;
+       /* background-color: #FF0000; */
+     }
+
+     .modal-text--1 {  /* Targeting small-screen devices & others */
+       font-family: 'Poppins', sans-serif;
+       font-weight: 500;
+       font-size: 0.9rem;  /* Small-screen */
+       color: #050505;
+     }
+
+     @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+       .modal-text--1 {
+         font-size: 1.2rem;
+       }
+     }
+
+     .modal-text--2 {
+       font-family: 'Poppins', sans-serif;
+       font-weight: 400;
+       font-size: 1rem;
+       color: #050505;
+       transform: translateY(-10px);
+     }
+
+     .button-colour--3 {
+       color: #FFFFFF;
+       border-radius: 0;
+       background-color: #000000;
+     }
+
+     .button-colour--3:hover {
+       color: #FFFFFF;
+     }
+  </style>
+</head>
+
+<body>
+
+  <div id="main">
+
+    <!-- Side Navigation Menu -->
+    <div id="mySidenav" class="sidenav">
+      <!-- Greeting message to User -->
+      <span class="account-user-name">Update Account</span> <!-- NB: Template message here causes error on form submission -->
+
+      <!-- Menu Items -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/account"><i class="fas fa-user sidebar-icon"></i> Account</a>
+      <a href="/account/details"><i class="fas fa-folder-open sidebar-icon"></i> Details</a>
+      <a href="/account/details"><i class="fas fa-key sidebar-icon"></i> Reset Password</a>
+      <a href="/account/logout"><i class="fas fa-sign-out-alt sidebar-icon"></i> Logout</a>
+    </div>
+
+    <!-- Bottom Header From Home Page -->
+    <header class="top-container--2">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="/"><img src="images/logo.png" alt="Website Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars hamburger-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Container for Sidenav opening button -->
+    <header class="sidenav-button-container">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+            <!-- Button to open Sidenav -->
+            <span class="account-icon" onclick="openNav()"><i class="fas fa-user-circle"></i></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Contents -->
+    <section class="account-details-page">
+      <div class="container-fluid">
+        <!-- Shape Divider -->
+        <div class="custom-shape-divider-bottom-1601307827">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+        </div>
+        <div class="text-container--1">
+          <h3 class="text-1">Update your details below:</h3>
+        </div>
+        <div class="update-details-section">
+          <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-8">
+      <div class="card form-background">
+  <div class="card-body">
+    <%- include("partials/messages"); -%>
+    <form action="/account/details" method="post">
+  <div class="form-group update-form-input">
+    <label for="clientName"><span class="text-colour">Name:</span></label>
+    <input type="text" id="clientName" name="name" class="form-control" autocomplete="off"
+    value="<%= typeof name != 'undefined' ? name: '' %>"
+    >
+  </div>
+  <div class="form-group update-form-input">
+    <label for="clientEmail"><span class="text-colour">Email:</span></label>
+    <input type="email" id="clientEmail" name="email" class="form-control" autocomplete="off"
+    value="<%= typeof email != 'undefined' ? email: '' %>"
+    >
+  </div>
+  <div class="form-group update-form-input">
+    <label for="clientPassword"><span class="text-colour">Password:</span></label>
+    <input type="password" id="clientPassword" name="password" class="form-control"
+    value="<%= typeof password != 'undefined' ? password: '' %>"
+    >
+  </div>
+  <button type="submit" class="btn button-colour--1 btn-block">Save</button>
+</form>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="row justify-content-center close-account-row">
+    <div class="col-md-auto">
+      <div class="card close-account-button">
+  <div class="card-body">
+    <!-- Button trigger modal -->
+<button type="button" class="btn button-colour--2 btn-lg btn-block" data-toggle="modal" data-target="#modal-popup">
+  Close Account
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-popup" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Warning Message!</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-text-container">
+          <p class="modal-text--1">This action CANNOT be reversed</p>
+          <p class="modal-text--2">Do you really want to close your account?</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="/account/delete" class="btn button-colour--3 btn-block">Close Account</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>
