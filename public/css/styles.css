@@ -1,8 +1,13 @@
+html {
+  min-height: 100%;  /* Makes web page at least as high as the browser viewport */
+}
+
 body {
   margin: 0;
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;  /* Ensures that page always covers the entire viewport */
 }
 
 /* Pre-Navigation Bar */
