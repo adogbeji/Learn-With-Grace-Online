@@ -159,25 +159,6 @@
         fill: #000000;
     }
 
-    /* ALERT MESSAGE */
-
-    .alert-message-box {  /* Targeting small-screen devices & others */
-      width: 100%;  /* Small-screen */
-      transform: translateY(8px);
-      /* background-color: grey; */
-    }
-
-    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
-      .alert-message-box {
-        width: 60%;
-        margin: auto;
-      }
-    }
-
-    .alert-colour {
-      background-color: #00B7C2;
-    }
-
     .text-container--1 {
       width: 90%;
       margin: auto;
@@ -545,7 +526,7 @@
     <!-- Side Navigation Menu -->
     <div id="mySidenav" class="sidenav">
       <!-- Greeting message to User -->
-      <span class="account-user-name">Hi, User!</span>
+      <span class="account-user-name">Hi, <%= name %>!</span>
 
       <!-- Menu Items -->
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -597,17 +578,6 @@
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
             </svg>
         </div>
-        <!-- Alert Message -->
-   <div class="alert-message-box">
-     <div class="alert alert-colour alert-dismissible fade show" role="alert">
-   <div class="alert-text-box">
-     <p class="alert-text"><strong>DEAL:</strong> Book 5hrs for £80!</p>
-   </div>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-   </div>
    <div class="text-container--1">
      <h3 class="text-1">Please go below to make your lesson bookings!</h3>
    </div>
