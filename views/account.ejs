@@ -178,6 +178,43 @@
       background-color: #00B7C2;
     }
 
+    .alert-text-box {  /* Targeting small-screen devices & others */
+      width: 90%;
+      margin: auto;
+      text-align: left;  /* Small-screen */
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .alert-text-box {
+        text-align: center;
+      }
+    }
+
+    .alert-text {  /* Targeting small-screen devices & others */
+      font-family: 'Poppins', sans-serif;
+      font-weight: 200;
+      font-size: 1rem;  /* Small-screen */
+      color: #000000;
+      transform: translateY(7px);
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .alert-text {
+        font-size: 1.3rem;
+      }
+    }
+
+    .discount-link {
+      color: #7E0FC5;
+      text-decoration: underline solid #0000FF;
+    }
+
+    .discount-link:hover {
+      color: #FFFFFF;
+      text-decoration-color: #0000FF;
+    }
+
     .text-container--1 {
       width: 90%;
       margin: auto;
@@ -545,7 +582,7 @@
     <!-- Side Navigation Menu -->
     <div id="mySidenav" class="sidenav">
       <!-- Greeting message to User -->
-      <span class="account-user-name">Hi, User!</span>
+      <span class="account-user-name">Hi, <%= name %>!</span>
 
       <!-- Menu Items -->
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -601,7 +638,7 @@
    <div class="alert-message-box">
      <div class="alert alert-colour alert-dismissible fade show" role="alert">
    <div class="alert-text-box">
-     <p class="alert-text"><strong>DEAL:</strong> Book 5hrs for £80!</p>
+     <p class="alert-text"><strong class="font-weight-bold">DEAL:</strong> Book 5hrs for £80 <a class="discount-link font-italic" href="#">here!</a></p>
    </div>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>

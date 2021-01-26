@@ -62,19 +62,12 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
 
 const User = require("./models/user");
 
-// const getHomePage = (req, res) => {
-//   if (req.isAuthenticated()) {
-//     res.render("logged-in-home");
-//   } else {
-//     res.render("home");
-//   }
-// };
-
-// For Next Time: Finish Alert Message text on Account Page!
-
-const getHomePage = (req, res) => {  // Test Route
-  // Account Page Greeting: <span class="account-user-name">Hi, <%= name %>!</span>
-  res.render('account');
+const getHomePage = (req, res) => {
+  if (req.isAuthenticated()) {
+    res.render("logged-in-home");
+  } else {
+    res.render("home");
+  }
 };
 
 const getHomeRegisterForm = (req, res) => {  // Handles requests to '/register' route
